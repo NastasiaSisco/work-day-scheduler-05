@@ -57,3 +57,14 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+/* new color for date/time addition */
+#currentDay {
+  font-size: 30px;
+  color: green;
+}
+/* new color used as placeholder until I can figure out past/present/future */
+.tbd {
+  background-color: lemonchiffon;
+  color: white;
+}

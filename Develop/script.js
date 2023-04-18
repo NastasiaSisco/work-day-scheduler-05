@@ -1,3 +1,52 @@
+// ---BELOW---
+// grabbing current date + time with Dayjs
+// ---BELOW---
+var dateTimeNow = dayjs();
+
+// ---BELOW---
+// setting current date to page
+// ---BELOW---
+$("#currentDay").text(dateTimeNow.format("MMMM DD, YYYY hh:mm:ss"));
+
+
+
+
+  // ---BELOW---
+// function attempting to retrieve saved schedule
+function savedSchedule() {
+  
+  // ---BELOW---
+// grabbing elements from HTML
+var saveButton = document.querySelector(".saveBtn");
+var allTextEntries = document.querySelectorAll("textarea");
+
+// ---BELOW---
+// adding click listener for save button
+saveButton.addEventListener("click", function() {
+
+// ---BELOW---
+// saving to local storage
+var scheduledTask = document.querySelector(".description").value;
+localStorage.setItem("saved-task", scheduledTask);
+
+var retrieveTask = localStorage.getItem("saved-task");
+console.log(retrieveTask);
+})
+}
+
+
+savedSchedule();
+
+
+
+
+
+
+
+
+
+
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
@@ -20,10 +69,7 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-  var dateToday = dayjs();
-  
 });
-
 
 
 
