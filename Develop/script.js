@@ -17,6 +17,7 @@ function savedSchedule() {
   
   // ---BELOW---
 // grabbing elements from HTML
+// var saveButton = document.querySelector(".saveBtn");
 var saveButton = document.querySelector(".saveBtn");
 var allTextEntries = document.querySelectorAll("textarea");
 
@@ -24,14 +25,15 @@ var allTextEntries = document.querySelectorAll("textarea");
 // adding click listener for save button
 saveButton.addEventListener("click", function() {
 
-// ---BELOW---
-// saving to local storage
-var scheduledTask = document.querySelector(".description").value;
-localStorage.setItem("saved-task", scheduledTask);
-
-var retrieveTask = localStorage.getItem("saved-task");
-console.log(retrieveTask);
-})
+    
+    // ---BELOW---
+    // saving to local storage
+    var scheduledTask = document.querySelector(".description").value;
+    localStorage.setItem("saved-task", scheduledTask);
+    
+    var retrieveTask = localStorage.getItem("saved-task");
+    console.log(retrieveTask);
+  })
 }
 
 
